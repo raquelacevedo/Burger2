@@ -3,20 +3,19 @@
 
 ------------------------------------------------------------------------------------------------------------------------------
 
-## PASSWORD AUTHENTICATION
-
-This app allows users to create an account, log into the account and sign back out securely. All user data is stored in a mysql
-database.
-
-------------------------------------------------------------------------------------------------------------------------------
-
-## USER STORY
+## User Story
 
 In modern web applications, authentication can take a variety of forms. Traditionally, users log in by providing a username and 
 password.  Burger2 offers users a way to safely create an account by using an email and a password that is safely stored into a
 database.  Because of this authentication process users do not have to worry about their personal details used in creating an
 account.
 
+------------------------------------------------------------------------------------------------------------------------------
+
+## Password Authentication
+
+This app allows users to create an account, log into the account and sign back out securely using Passport. All user data is stored in a mysql
+database.
 ------------------------------------------------------------------------------------------------------------------------------
 
 ## Technologies Used
@@ -31,7 +30,7 @@ account.
 
 ------------------------------------------------------------------------------------------------------------------------------
 
-## Getting Starte
+## Getting Started
 
 To begin using Burger2, please clone this repository into your local storage. Once this is complete, please follow these steps;
 
