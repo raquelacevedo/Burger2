@@ -49,14 +49,17 @@ To begin using Burger2, please clone this repository into your local storage. On
 ## What files make up Burger2 ?
 
 # Develop
-  
-  # config
 
-  # middleware
+package.json {
+Contains all package info, node modules used, version info etc };
 
-      isAuthenticated.js { 
-      restricts routes that user is not allowed to visit if not logged in. if user is logged in, it continues 
-      with request };
+Schema.sql {
+contains mysql script for creating the passport_demo database };
+
+server.js {
+Requires packages, sets up PORT, creates express and middleware, creates routes and syncs database / logs message in terminal on successful connection to server };
+
+  # Config
 
   config.json {
   connection configuration to connect to server };
@@ -64,7 +67,13 @@ To begin using Burger2, please clone this repository into your local storage. On
   passport.js {
   contains javascript logic that tells passport we want to log in with an email address and password };
 
-  # models
+  # Middleware
+
+      isAuthenticated.js { 
+      restricts routes that user is not allowed to visit if not logged in. if user is logged in, it continues 
+      with request };
+
+  # Models
 
     index.js {
     connects to database and imports users log in data };
@@ -72,25 +81,8 @@ To begin using Burger2, please clone this repository into your local storage. On
     user.js {
     requires "bcrypt" for password hashing. this makes our database secure even if compromised. Here we have JS that defines what is stored on our database };
 
-# public
+# Public
   
-  # js
-
-    login.js {
-    Contains javascript logic that is used by the form in the login.html page which validates the information submitted to the database and throws an error if the information cannot be verified.};
-
-    members.js {
-    Contains javascript logic that is used once the user information is validated and access is granted to the members.html page};
-
-    signup.js {
-    Contains javascript logic that is used by the form in the signup.html page.  This logic validates the input submitted and if successful the information is sent to the databasse};
-
-  # stylesheets
-
-    style.css {
-    This file is a stylesheet (CSS) file.It controls the presentation (visual design and layout) of the website pages.
-    };
-
   login.html {
   This is the webpage where a user can log into the app. };
 
@@ -101,22 +93,29 @@ To begin using Burger2, please clone this repository into your local storage. On
   signup.html {
   This is the webpage where a new user signs up for access to the app.  };
 
+  # Js
 
-# routes
+    login.js {
+    Contains javascript logic that is used by the form in the login.html page which validates the information submitted to the database and throws an error if the information cannot be verified.};
+
+    members.js {
+    Contains javascript logic that is used once the user information is validated and access is granted to the members.html page};
+
+    signup.js {
+    Contains javascript logic that is used by the form in the signup.html page.  This logic validates the input submitted and if successful the information is sent to the databasse};
+
+  # Stylesheets
+
+    style.css {
+    This file is a stylesheet (CSS) file.It controls the presentation (visual design and layout) of the website pages.
+    };
+
+# Routes
 
   api-routes.js { 
   Contains routes for signing in, logging out and getting users specific data to be displayed client side };
 
   html-routes.js {
   Contains routes that check whether user is signed in, whether user already has account etc and sends them tio the correct html page };
-
-package.json {
-Contains all package info, node modules used, version info etc };
-
-Schema.sql {
-contains mysql script for creating the passport_demo database };
-
-server.js {
-Requires packages, sets up PORT, creates express and middleware, creates routes and syncs database / logs message in terminal on successful connection to server };
 
 ------------------------------------------------------------------------------------------------------------------------------
